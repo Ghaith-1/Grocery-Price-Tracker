@@ -16,7 +16,8 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        home = (ImageView) findViewById(R.id.home);
+        home = (ImageView) findViewById(R.id.homeImg);
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

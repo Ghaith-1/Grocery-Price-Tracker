@@ -9,22 +9,164 @@
 
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/top1Layout"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
+            android:id="@+id/top2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#3F51B5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/top3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <SearchView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="top"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="30dp"
+                    android:background="#FFFFFF"
+                    android:iconifiedByDefault="false"
+                    android:queryHint="Search for new offers">
+
+                </SearchView>
+
+                <ImageView
+                    android:id="@+id/shopping"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="10dp"
+
+
+                    app:srcCompat="@drawable/shopping" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mid1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="224dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/botLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top1Layout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="NotSibling">
+
+        <LinearLayout
+            android:id="@+id/mid2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/nearbyLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/nearbyImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/nearbystore" />
+
+                <TextView
+                    android:id="@+id/nearbyTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search nearby Stores"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/favoriteLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/favoriteImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/favoritstore" />
+
+                <TextView
+                    android:id="@+id/favoriteTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Favorite Stores"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/priceImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/pricecomparison" />
+
+                <TextView
+                    android:id="@+id/priceTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price Comparison"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/homeLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/home"
+                android:id="@+id/homeImg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="@integer/material_motion_duration_long_1"
@@ -41,20 +183,22 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/profileLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/nearByStoresImg"
+                android:id="@+id/profileImg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="@integer/material_motion_duration_long_1"
-                app:srcCompat="@drawable/profile1" />
+                app:srcCompat="@drawable/profile1"
+                tools:ignore="NestedWeights" />
 
             <TextView
-                android:id="@+id/nearByStoresTxt"
+                android:id="@+id/profileTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -64,29 +208,31 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/storeLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/favoriteImg"
+                android:id="@+id/storeImg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="@integer/material_motion_duration_long_1"
-                app:srcCompat="@drawable/store" />
+                app:srcCompat="@drawable/shoppinglist" />
 
             <TextView
-                android:id="@+id/favoriteTxt"
+                android:id="@+id/storeTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Stores"
+                android:text="Shopping list"
                 android:textAlignment="center"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/moreLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -108,35 +254,7 @@
                 android:textAlignment="center"
                 android:textSize="12sp" />
         </LinearLayout>
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#123456"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginVertical="75dp"
-            android:background="#FFFFFF"
-
-
-            android:orientation="horizontal">
-
-            <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:iconifiedByDefault="false"
-                android:queryHint="Search for new offers" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
